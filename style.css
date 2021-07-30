@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* , *::before, *::after {
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+} 
+
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    background-image: linear-gradient(25deg, #264653, #2e8bc0, #74c69d , #e76f51  );
+}
+
+.grid-calculator {
+	display: grid;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(75px, auto) repeat(5, 75px);
+	align-content:center; 
+	justify-content: center;
+}
+
+.grid-calculator > button {
+	cursor: pointer;
+	border: 1px solid #edf2f4;
+	outline: none;
+	font-size: 30px;
+	background-color:rgba(192,192,192,0.5);
+}
+
+.grid-calculator > button:hover {
+	background-color:rgba(192,192,192,0.9);
+	border: 1px solid #6b705c;
+}
+
+.span-two {
+	grid-column: span 2;
+}
+
+.span-four {
+	grid-column: span 4;
+}
+
+.output {
+	grid-column: 1/-1;
+	background-color:#050a30;
+	display:flex;
+	align-items: flex-end;
+	justify-content:space-around;
+	flex-direction: column;
+	padding: 10px;
+	word-wrap: break-word;
+	word-break:break-all;
+}
+
+.output .previous-op {
+	color: rgba(229, 232, 234, .9);
+	font-size: 1rem;
+}
+
+.output .current-op {
+	color:white;
+	font-size: 2rem;
+}
